@@ -21,13 +21,10 @@ static const CGFloat kKFCircleLineWidth = 4;
     CAEmitterCell *_eCell;
 }
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder
+- (void)awakeFromNib
 {
-    if (self = [super initWithCoder:aDecoder]) {
-//        self.frame = CGRectMake(100, 100, 40, 40);
-        [self initializeView];
-    }
-    return self;
+    [super awakeFromNib];
+    [self initializeView];
 }
 
 - (instancetype)init
