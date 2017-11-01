@@ -1,5 +1,6 @@
-/Users/zhukaifa/Desktop/count-down-view.gif
 # KFCountDownView
+![image](https:github.com/zhkaifa/KFCountDownView.count-down-view.gif)
+
 
 
 
