@@ -15,7 +15,8 @@
 		FD3D056F1FA329160045A50D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3D056E1FA329160045A50D /* main.m */; };
 		FD3D05791FA329160045A50D /* KFCountDownProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3D05781FA329160045A50D /* KFCountDownProjectTests.m */; };
 		FD3D05841FA329170045A50D /* KFCountDownProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3D05831FA329170045A50D /* KFCountDownProjectUITests.m */; };
-		FD3D05961FA32D0B0045A50D /* KFCountDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3D05941FA32D0A0045A50D /* KFCountDownView.m */; };
+		FDB4AE291FF0E70D00DCBCEA /* KFCountDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB4AE271FF0E70D00DCBCEA /* KFCountDownView.m */; };
+		FDB4AE2B1FF0EAD800DCBCEA /* KFCountDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4AE2A1FF0EAD800DCBCEA /* KFCountDownView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FD1CD9BD1FECDB7C00AFE37E /* KFCountDownProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KFCountDownProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		FD3D055C1FA329160045A50D /* KFCountDownProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KFCountDownProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD3D055F1FA329160045A50D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FD3D05601FA329160045A50D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -52,8 +54,9 @@
 		FD3D057F1FA329170045A50D /* KFCountDownProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KFCountDownProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD3D05831FA329170045A50D /* KFCountDownProjectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KFCountDownProjectUITests.m; sourceTree = "<group>"; };
 		FD3D05851FA329170045A50D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD3D05941FA32D0A0045A50D /* KFCountDownView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KFCountDownView.m; sourceTree = "<group>"; };
-		FD3D05951FA32D0A0045A50D /* KFCountDownView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KFCountDownView.h; sourceTree = "<group>"; };
+		FDB4AE271FF0E70D00DCBCEA /* KFCountDownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFCountDownView.m; sourceTree = "<group>"; };
+		FDB4AE281FF0E70D00DCBCEA /* KFCountDownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFCountDownView.h; sourceTree = "<group>"; };
+		FDB4AE2A1FF0EAD800DCBCEA /* KFCountDownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFCountDownView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,13 +111,15 @@
 				FD3D05601FA329160045A50D /* AppDelegate.m */,
 				FD3D05621FA329160045A50D /* ViewController.h */,
 				FD3D05631FA329160045A50D /* ViewController.m */,
-				FD3D05951FA32D0A0045A50D /* KFCountDownView.h */,
-				FD3D05941FA32D0A0045A50D /* KFCountDownView.m */,
+				FDB4AE281FF0E70D00DCBCEA /* KFCountDownView.h */,
+				FDB4AE271FF0E70D00DCBCEA /* KFCountDownView.m */,
+				FDB4AE2A1FF0EAD800DCBCEA /* KFCountDownView.swift */,
 				FD3D05651FA329160045A50D /* Main.storyboard */,
 				FD3D05681FA329160045A50D /* Assets.xcassets */,
 				FD3D056A1FA329160045A50D /* LaunchScreen.storyboard */,
 				FD3D056D1FA329160045A50D /* Info.plist */,
 				FD3D056E1FA329160045A50D /* main.m */,
+				FD1CD9BD1FECDB7C00AFE37E /* KFCountDownProject-Bridging-Header.h */,
 			);
 			path = KFCountDownProject;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 				TargetAttributes = {
 					FD3D055B1FA329160045A50D = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Manual;
 					};
 					FD3D05731FA329160045A50D = {
@@ -271,9 +277,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD3D05641FA329160045A50D /* ViewController.m in Sources */,
-				FD3D05961FA32D0B0045A50D /* KFCountDownView.m in Sources */,
+				FDB4AE291FF0E70D00DCBCEA /* KFCountDownView.m in Sources */,
 				FD3D056F1FA329160045A50D /* main.m in Sources */,
 				FD3D05611FA329160045A50D /* AppDelegate.m in Sources */,
+				FDB4AE2B1FF0EAD800DCBCEA /* KFCountDownView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +443,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KFCountDownProject/Info.plist;
@@ -443,6 +451,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = KF.KFCountDownProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "KFCountDownProject/KFCountDownProject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -451,6 +462,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KFCountDownProject/Info.plist;
@@ -458,6 +470,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = KF.KFCountDownProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "KFCountDownProject/KFCountDownProject-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -465,6 +479,7 @@
 		FD3D058C1FA329170045A50D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 999Q6AHKZY;
@@ -480,6 +495,7 @@
 		FD3D058D1FA329170045A50D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 999Q6AHKZY;
@@ -495,6 +511,7 @@
 		FD3D058F1FA329170045A50D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 999Q6AHKZY;
 				INFOPLIST_FILE = KFCountDownProjectUITests/Info.plist;
@@ -509,6 +526,7 @@
 		FD3D05901FA329170045A50D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 999Q6AHKZY;
 				INFOPLIST_FILE = KFCountDownProjectUITests/Info.plist;

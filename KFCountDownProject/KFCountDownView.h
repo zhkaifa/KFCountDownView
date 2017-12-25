@@ -16,6 +16,9 @@
 // 粒子的颜色 默认和countDownCircleColor是一样的颜色
 @property (nonatomic, strong) UIColor *countDownEmitterColor;
 
+@property (nonatomic, strong) UIImage *closeButtonImage;
+@property (nonatomic, strong) UIColor *closeButtonBackgroundColor;
 - (void)startAnimation;
 - (void)endAnimation;
+- (instancetype)init NS_UNAVAILABLE;
 @end
