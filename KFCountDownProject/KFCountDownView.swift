@@ -83,8 +83,8 @@ class KFCountDownView: UIView {
         cell.name = "countDown"
         cell.color = countDownEmitterColor.cgColor
         cell.contents = getImageWithColor(color: countDownEmitterColor, size: CGSize (width: 1, height: 1))?.cgImage
-        cell.birthRate = 200
-        cell.lifetime = 0.3
+        cell.birthRate = 0
+        cell.lifetime = 0.6
         
         eLayer?.emitterCells = [cell]
         eCell = cell
@@ -137,6 +137,10 @@ class KFCountDownView: UIView {
             closedButtonClick()
             return
         }
+        if (eCell?.birthRate == 0) {
+            eCell?.birthRate = 80;
+        }
+        
         let tuple = getCirclePath(progress: currentProgress)
         shaperLayer?.path = tuple.0.cgPath
         eLayer?.emitterPosition = tuple.1

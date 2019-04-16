@@ -7,7 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "KFCountDownProject-Swift.h"
+//#import "KFCountDownView.h"
 
+#define kWidth [UIScreen mainScreen].bounds.size.width
+#define kHeight [UIScreen mainScreen].bounds.size.height
 @interface ViewController ()
 
 @end
@@ -17,6 +21,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    KFCountDownView *countDownView = [[KFCountDownView alloc] initWithFrame:CGRectMake(kWidth/2 - 30, kHeight/2 - 30, 60, 60)];
+    [self.view addSubview:countDownView];
     
 }
 

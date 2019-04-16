@@ -29,11 +29,16 @@ static const CGFloat kKFCircleLineWidth = 4;
 //    self.backgroundColor = [UIColor redColor];
 }
 
+- (instancetype)init
+{
+    return [self initWithFrame:CGRectZero];
+}
+
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
+        [self initializeView];
     }
     return self;
 }
@@ -61,7 +66,6 @@ static const CGFloat kKFCircleLineWidth = 4;
     _eLayer = [CAEmitterLayer layer];
     _eLayer.frame = CGRectMake(0, 0, width, width);
     
-    _eLayer.emitterPosition = CGPointMake(width/2 + kKFCircleLineWidth/2, width/2 + kKFCircleLineWidth/2);
     _eLayer.emitterSize = CGSizeMake(kKFCircleLineWidth, kKFCircleLineWidth);
     _eLayer.emitterShape = kCAEmitterLayerCircle;
     _eLayer.emitterMode = kCAEmitterLayerSurface;
@@ -72,8 +76,8 @@ static const CGFloat kKFCircleLineWidth = 4;
     
     cell.color = _countDownCircleColor.CGColor;
     cell.contents = (__bridge id _Nullable)([self imageWithColor:_countDownCircleColor andSize:CGSizeMake(1, 1)].CGImage);
-    cell.birthRate = 200;
-    cell.lifetime = 0.3;
+    cell.birthRate = 0;
+    cell.lifetime = 0.6;
 
     _eLayer.emitterCells = @[cell];
     _eCell = cell;
@@ -165,6 +169,9 @@ static const CGFloat kKFCircleLineWidth = 4;
     if (_currentProgress > 1) {
         [self closeButtonClick];
         return;
+    }
+    if (_eCell.birthRate == 0) {
+        _eCell.birthRate = 80;
     }
     
     UIBezierPath *path = [UIBezierPath bezierPath];
